@@ -16,4 +16,5 @@ class OrgCheckSystem:
         org_info_dict = json.loads(org_info)
         cond_dict = json.loads(cond)
 
-        checks = await self.RulesEngine.apply_rules(org_info_dict, cond_dict)
+        check_result = await self.RulesEngine.apply_rules(org_info_dict, cond_dict)
+        return check_result
