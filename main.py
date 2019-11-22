@@ -2,9 +2,13 @@ import aiohttp
 import asyncio
 
 
+from OrgCheckSystem import OrgCheckSystem
+
+
 async def main():
     async with aiohttp.ClientSession() as session:
-        pass
+        org_system_system = OrgCheckSystem()
+        await org_system_system.check()
 
 
 if __name__ == '__main__':
